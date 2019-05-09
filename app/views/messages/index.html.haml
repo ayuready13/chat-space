@@ -1,0 +1,29 @@
+= @maseeage
+
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title ChatSpace
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %bodys
+    %header.header
+      .header__bar
+        %h1.grid-6 グループを作成しました
+    .leftbox
+      .leftbox__name
+        name
+      .leftbox__group
+        %a.leftbox__group__name1{href: '/messages/show'} group
+        .leftbox__group__top__message1 message test
+        %a.leftbox__group__name2{href: '/messages/show'} group2
+        .leftbox__group__top__message2 message test2
+
+
+    .user__chatgroup_nav
+      %a.user__chatgroup_nav_edit{href: '/messages/new'}Edit
+
+
+    -# = render partial: 'layouts/flash'

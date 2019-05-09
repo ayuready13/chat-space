@@ -1,0 +1,68 @@
+@import "./variable";
+
+
+.header {
+  color: white;
+  background-color: #38AEF0;
+  text-align: center;
+}
+
+
+.leftbox {
+  width: 300px;
+  color: white;
+  float: left;
+  margin: 0;
+  font-weight: bold;
+  &__name {
+    background-color: $backcolor;
+    font-size: 16px;
+    padding: 35px 20px;
+  }
+  &__group {
+    background-color: #2f3e51;
+    height: 100vh;
+    &__name1 {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      font-size: 15px;
+      padding: 20px 20px 5px 20px;
+    }
+    &__top__message1 {
+      font-size: 11px;
+      padding: 0 20px 40px 20px;
+    }
+    &__name2 {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      font-size: 15px;
+      padding: 0 20px 5px 20px;
+    }
+    &__top__message2 {
+      font-size: 11px;
+      padding: 0 20px 40px 20px;
+    }
+
+  }
+}
+
+.user__chatgroup_nav {
+  margin: 0;
+  background-color: white;
+  padding: 0 40px;
+  &_edit {
+    float: right;
+    margin: 28px 40px 0 0 ;
+    font-size: 16px;
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 20px;
+    background-color: transparent;
+    color: #38AEF0;
+    border: 1px solid #38AEF0;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+}

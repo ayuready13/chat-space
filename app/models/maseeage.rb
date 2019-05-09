@@ -1,0 +1,2 @@
+class Maseeage < ApplicationRecord
+end
