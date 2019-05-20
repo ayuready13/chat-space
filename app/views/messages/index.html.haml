@@ -1,14 +1,6 @@
-= @maseeage
-
 !!!
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title ChatSpace
-    = csrf_meta_tags
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-    %link{rel: "stylesheet", href: "https://use.fontawesome.com/releases/v5.8.2/css/all.css"}
   %bodys
     %header.header
       .header__alert グループを作成しました
@@ -24,11 +16,11 @@
               %a.leftbox--header__text__menu__edit--user__icon{href: '/users/edit'}
                 %i.fa.fa-cog
       .leftbox__groups
-        %a.leftbox__groups__group{href: '/messages/show'}
+        = link_to '',{href: '/messages/show'} do
           .leftbox__groups__group
             %p.leftbox__groups__group__name group
             %p.leftbox__groups__group__message message test
-        %a.leftbox__groups__group{href: '/messages/show'}
+        = link_to '', {href: '/messages/show'} do
           .leftbox__groups__group
             %p.leftbox__groups__group__name group2
             %p.leftbox__groups__group__message message test2
@@ -38,7 +30,7 @@
         .rightbox--top__chatgroup
           %h2.rightbox--top__chatgroup__nav group
           %ul.rightbox--top__chatgroup__menber menber : name
-        %a.rightbox--top__edit{href: '/messages/new'}Edit
+        = link_to 'Edit', {href: '/messages/new'}, class: "rightbox--top__edit"
       .rightbox--center
         .rightbox--center__id
           .rightbox--center__id__message
@@ -53,4 +45,3 @@
               %i.far.fa-image.fa-lg
           %input.rightbox--under__input__submitbtn{:type => "submit", :name => "commit", :value => "Send"}
            
-    -# = render partial: 'layouts/flash'
