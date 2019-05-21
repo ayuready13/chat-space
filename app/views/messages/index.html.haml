@@ -6,19 +6,19 @@
       %p.leftbox--header__text__name name
       %ul.leftbox--header__text__menu
         %li.leftbox--header__text__menu__new--group
-          = link_to '' 'groups/new' do
+          = link_to '' '#' do
             .leftbox--header__text__menu__new--group__icon
               %i.fa.fa-edit
         %li.leftbox--header__text__menu__edit--user
-          = link_to '' 'groups/new' do
+          = link_to '' '#' do
             .leftbox--header__text__menu__edit--user__icon
               %i.fa.fa-cog
   .leftbox__groups
-    = link_to '' 'messages/new' do
+    = link_to '' '#' do
       .leftbox__groups__group
         %p.leftbox__groups__group__name group
         %p.leftbox__groups__group__message message test
-    = link_to '' 'messages/new' do
+    = link_to '' '#' do
       .leftbox__groups__group
         %p.leftbox__groups__group__name group2
         %p.leftbox__groups__group__message message test2
@@ -28,7 +28,7 @@
     .rightbox--top__chatgroup
       %h2.rightbox--top__chatgroup__nav group
       %ul.rightbox--top__chatgroup__menber menber : name
-    = link_to 'Edit', 'messages/edit_path', class: "rightbox--top__edit"
+    = link_to 'Edit', '#', class: "rightbox--top__edit"
   .rightbox--center
     .rightbox--center__id
       .rightbox--center__id__message
