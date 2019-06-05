@@ -1,45 +1,24 @@
-%header.header
-  .header__alert グループを作成しました
-.leftbox
-  .leftbox--header
-    .leftbox--header__text
-      %p.leftbox--header__text__name name
-      %ul.leftbox--header__text__menu
-        %li.leftbox--header__text__menu__new--group
-          = link_to '' '#' do
-            .leftbox--header__text__menu__new--group__icon
-              %i.fa.fa-edit
-        %li.leftbox--header__text__menu__edit--user
-          = link_to '' '#' do
-            .leftbox--header__text__menu__edit--user__icon
-              %i.fa.fa-cog
-  .leftbox__groups
-    = link_to '' '#' do
-      .leftbox__groups__group
-        %p.leftbox__groups__group__name group
-        %p.leftbox__groups__group__message message test
-    = link_to '' '#' do
-      .leftbox__groups__group
-        %p.leftbox__groups__group__name group2
-        %p.leftbox__groups__group__message message test2
+.wrapper
+  .leftbox
+    = render 'devise/shared/leftbox'
 
-.rightbox
-  .rightbox--top
-    .rightbox--top__chatgroup
-      %h2.rightbox--top__chatgroup__nav group
-      %ul.rightbox--top__chatgroup__menber menber : name
-    = link_to 'Edit', '#', class: "rightbox--top__edit"
-  .rightbox--center
-    .rightbox--center__id
-      .rightbox--center__id__message
-        %p.rightbox--center__id__message__name name
-        %p.rightbox--center__id__message__date 2019/05/13
-      .rightbox--center__id__text testmessage
-  .rightbox--under
-    %form.rightbox--under__input
-      .rightbox--under__input__new
-        %input#message_content.rightbox--under__input__new__form{placeholder: "type a message", type: "text", name: "name"}
-        %label.rightbox--under__input__new__image{for: "message_image"}
-          %i.far.fa-image.fa-lg
-      %input.rightbox--under__input__submitbtn{type: "submit", name: "commit", value: "Send"}
+  .rightbox
+    .rightbox--top
+      .rightbox--top__chatgroup
+        %h2.rightbox--top__chatgroup__nav group
+        %ul.rightbox--top__chatgroup__menber menber : name
+      = link_to 'Edit', '#', class: "rightbox--top__edit"
+    .rightbox--center
+      .rightbox--center__id
+        .rightbox--center__id__message
+          %p.rightbox--center__id__message__name name
+          %p.rightbox--center__id__message__date 2019/05/13
+        .rightbox--center__id__text testmessage
+    .rightbox--under
+      %form.rightbox--under__input
+        .rightbox--under__input__new
+          %input#message_content.rightbox--under__input__new__form{placeholder: "type a message", type: "text", name: "name"}
+          %label.rightbox--under__input__new__image{for: "message_image"}
+            %i.far.fa-image.fa-lg
+        %input.rightbox--under__input__submitbtn{type: "submit", name: "commit", value: "Send"}
            
