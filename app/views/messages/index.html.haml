@@ -1,0 +1,24 @@
+.wrapper
+  .leftbox
+    = render 'devise/shared/leftbox'
+
+  .rightbox
+    .rightbox--top
+      .rightbox--top__chatgroup
+        %h2.rightbox--top__chatgroup__nav group
+        %ul.rightbox--top__chatgroup__menber menber : name
+      = link_to 'Edit', '#', class: "rightbox--top__edit"
+    .rightbox--center
+      .rightbox--center__id
+        .rightbox--center__id__message
+          %p.rightbox--center__id__message__name name
+          %p.rightbox--center__id__message__date 2019/05/13
+        .rightbox--center__id__text testmessage
+    .rightbox--under
+      %form.rightbox--under__input
+        .rightbox--under__input__new
+          %input#message_content.rightbox--under__input__new__form{placeholder: "type a message", type: "text", name: "name"}
+          %label.rightbox--under__input__new__image{for: "message_image"}
+            %i.far.fa-image.fa-lg
+        %input.rightbox--under__input__submitbtn{type: "submit", name: "commit", value: "Send"}
+           
