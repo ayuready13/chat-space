@@ -1,46 +1,125 @@
-.side-bar {
-  box-sizing: border-box;
-  color: white;
+.leftbox {
   width: 300px;
-  .header {
-    // background-color: $side_blue_dark;
-    height: 100px;
-    line-height: 100px;
+  color: white;
+  float: left;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  &--header {
+    background-color: $dark_black;
+    font-size: 16px;
     padding: 0 20px;
-    &__name {
-      display: inline-block;
-      // font-size: $side_header_font;
-      font-weight: bold;
-    }
-    &__lists {
-      display: inline-block;
-      float: right;
-      .list {
-        display: inline-block;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    &__text {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      &__name {
+        margin: 0;
+        padding: 0;
       }
-      .icon {
-        color: white;
-        // font-size: $side_header_font;
+      &__menu {
+        display: flex;
+        &__new--group {
+          margin-left: 0.3rem;
+          &__icon {
+            color: white;
+          }
+        }
+        &__edit--user {
+          margin-left: 0.3rem;
+          &__icon {
+            color: white;
+          }
+        }
       }
     }
   }
-
-  .groups {
-    // background-color: $side_blue_light;
+  &__groups {
+    background-color: $light_black;
     height: calc(100vh - 100px);
     padding: 0 20px;
-    .group {
+    overflow: scroll;
+    &__group {
       box-sizing: border-box;
-      padding: 20px 0 40px;
+      text-decoration: none;
+      padding: 20px 0;
+      text-decoration: none;
       &__name {
         color: white;
-        // font-size: $side_group_name;
+        font-size: 15px;
+        margin-bottom: 5px;
       }
       &__message {
+        font-size: 11px;
         color: white;
-        // font-size: $side_group_message;
-        margin-top: 5px;
+        margin-bottom: 40px;
       }
     }
   }
 }
+
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+.fa-edit:before {
+  content: "\f044";
+}
+
+.fa-cog:before {
+  content: "\f013";
+}
+
+
+// .side-bar {
+//   box-sizing: border-box;
+//   color: white;
+//   width: 300px;
+//   .header {
+//     // background-color: $side_blue_dark;
+//     height: 100px;
+//     line-height: 100px;
+//     padding: 0 20px;
+//     &__name {
+//       display: inline-block;
+//       // font-size: $side_header_font;
+//       font-weight: bold;
+//     }
+//     &__lists {
+//       display: inline-block;
+//       float: right;
+//       .list {
+//         display: inline-block;
+//       }
+//       .icon {
+//         color: white;
+//         // font-size: $side_header_font;
+//       }
+//     }
+//   }
+
+  // .groups {
+  //   background-color: $light_black;
+  //   height: calc(100vh - 100px);
+  //   padding: 0 20px;
+  //   .group {
+  //     box-sizing: border-box;
+  //     padding: 20px 0 40px;
+  //     &__name {
+  //       color: white;
+  //       font-size: $side_group_name;
+  //     }
+  //     &__message {
+  //       color: white;
+  //       font-size: $side_group_message;
+  //       margin-top: 5px;
+  //     }
+  //   }
+  // }
