@@ -1,2 +1,0 @@
-class Maseeage < ApplicationRecord
-end
