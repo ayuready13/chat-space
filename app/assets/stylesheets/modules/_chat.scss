@@ -1,6 +1,7 @@
 .rightbox {
-  width: calc(100vw - 300px);
+  width: calc(100% - 300px);
   float: left;
+  box-sizing: border-box;
   &--top {
     background-color: white;
     height: 100%;
@@ -39,7 +40,7 @@
   }
   &--center {
     background-color: #fafafa;
-    height: calc(100vh - 260px);
+    height: calc(100vh - 280px);
     padding: 46px 40px;
     overflow: scroll;
     &__id {
