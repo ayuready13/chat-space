@@ -9,11 +9,7 @@
         %ul.rightbox--top__chatgroup__menber menber : name
       = link_to 'Edit', '#', class: "rightbox--top__edit"
     .rightbox--center
-      .rightbox--center__id
-        .rightbox--center__id__message
-          %p.rightbox--center__id__message__name name
-          %p.rightbox--center__id__message__date 2019/05/13
-        .rightbox--center__id__text testmessage
+      = render @messages
     .rightbox--form
       = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'rightbox--form__message', placeholder: 'type a message'
