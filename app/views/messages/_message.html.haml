@@ -1,11 +1,11 @@
-.rightbox--center__id
-  .rightbox--center__id__message
-    %p.rightbox--center__id__message__name
+.rightbox--center__message
+  .rightbox--center__message__info
+    %p.rightbox--center__message__info__name
       = message.user.name
-    %p.rightbox--center__id__message__date
+    %p.rightbox--center__message__info__date
       = message.created_at.strftime("%Y/%m/%d %H:%M")
-  .rightbox--center__id__text
+  .rightbox--center__message__text
     - if message.content.present?
-      %p.rightbox--center__id__text__content
+      %p.rightbox--center__message__text__content
         = message.content
     = image_tag message.image.url, class: 'rightbox--center__id__text__image' if message.image.present?

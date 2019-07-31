@@ -43,9 +43,9 @@
     height: calc(100vh - 280px);
     padding: 46px 40px;
     overflow: scroll;
-    &__id {
+    &__message {
       padding-bottom: 40px;
-      &__message {
+      &__info {
         display: flex;
         margin-bottom: 10px;
         &__name {
