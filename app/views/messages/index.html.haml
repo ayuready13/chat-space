@@ -5,7 +5,8 @@
   .rightbox
     .rightbox--top
       .rightbox--top__chatgroup
-        %h2.rightbox--top__chatgroup__nav group
+        .rightbox--top__chatgroup__nav
+          = @group.name
         %ul.rightbox--top__chatgroup__menber menber : name
       = link_to edit_group_path(@group.id) do
         .rightbox--top__edit Edit
