@@ -12,10 +12,10 @@ $(document).on('turbolinks:load', function(){
                 search_list.append(html);
   }
 
-  function appendErrMsgToHTML(msg) {
+  function appendNoUser(msg) {
     var html =`
               <div class="chat-group-user clearfix">
-                <p class="chat-group-user__name">${mag}</p>
+                <p class="chat-group-user__name">${msg}</p>
               </div>`;
               search_list.append(html);
   }
@@ -24,30 +24,23 @@ $(document).on('turbolinks:load', function(){
     var input = $("#user-search-field").val();
 
     $.ajax({
-      tyoe: 'GET',
+      type: 'GET',
       url: '/users',
       data: {keyword: input},
       dataType: 'json'
     })
 
-    .done(function (users) {
-      if (input.length === 0){
-        $('#user-search-result').empty();
-      }
-
-      else if (input.length !== 0){
-        $('#user-search-result').empty();
+    .done(function(users){
+      $('#user-search-result').empty();
+      if (users.length !== 0){
         users.forEach(function(user){
           appendUser(user)
         });
       }
-
-      else{
-        $('#user-search-result').empty();
-        appendErrMsgToHTML("一致するユーザーが見つかりません");
+      else {
+        appendNoUser("一致するユーザーが見つかりません");
       }
     })
-
     .fail(function(){
       alert('ユーザー検索に失敗しました');
     });
